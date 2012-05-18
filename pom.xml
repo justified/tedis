@@ -13,7 +13,7 @@
 	<name>Tedis parent project</name>
 	<packaging>pom</packaging>
 	<description>Another redis java client.</description>
-	<url>https://github.com/juhuasuan/tedis</url>
+	<url>https://github.com/taobao/tedis</url>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -22,9 +22,9 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:https://github.com/juhuasuan/tedis</connection>
-		<developerConnection>scm:git:git@github.com:juhuasuan/tedis.git</developerConnection>
-		<url>https://github.com/juhuasuan/tedis</url>
+		<connection>scm:git:https://github.com/taobao/tedis</connection>
+		<developerConnection>scm:git:git@github.com:taobao/tedis.git</developerConnection>
+		<url>https://github.com/taobao/tedis</url>
 	</scm>
 	<developers>
 		<developer>
