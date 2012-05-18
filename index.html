@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Tedis by taobao</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Tedis</h1>
+        <p>Tedis是另一个redis的java客户端</p>
+        <p class="view"><a href="https://github.com/taobao/tedis">View the Project on GitHub <small>taobao/tedis</small></a></p>
+        <ul>
+          <li><a href="https://github.com/taobao/tedis/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/taobao/tedis/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/taobao/tedis">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Tedis</h1>
+
+<p>Tedis是另一个<a href="http://redis.io" title="redis">redis</a>的java客户端</p>
+
+<p>Tedis的目标是打造一个可在生产环境直接使用的高可用Redis解决方案。参见<a href="https://github.com/taobao/tedis/wiki" title="more info">更多资料</a></p>
+
+<h2>Feature</h2>
+
+<ul>
+<li>高可用，Tedis使用多写随机读做HA确保redis的高可用</li>
+<li>高性能，使用特殊的线程模型，使redis的性能不限制在客户端</li>
+<li>多种使用方式，如果你只有一个redis实例，并不需要tedis的HA功能，可以直接使用tedis-atomic；使用tedis的高可用功能需要部署多个redis实例使用tedis-group</li>
+<li>两种API，包括针对byte的底层api和面向object的高层api</li>
+<li>多种方便使用redis的工具集合，包括mysql数据同步到redis工具，利用redis做搜索工具等</li>
+</ul><h2>QuickStart</h2>
+
+<p>引入Maven依赖：</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.taobao.common<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>tedis-group<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.1.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre>
+</div>
+
+
+<div class="highlight">
+<pre><span class="n">Group</span> <span class="n">tedisGroup</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TedisGroup</span><span class="o">(</span><span class="n">appName</span><span class="o">,</span> <span class="n">version</span><span class="o">);</span>
+<span class="n">tedisGroup</span><span class="o">.</span><span class="na">init</span><span class="o">();</span>
+<span class="n">ValueCommands</span> <span class="n">valueCommands</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultValueCommands</span><span class="o">(</span><span class="n">tedisGroup</span><span class="o">.</span><span class="na">getTedis</span><span class="o">());</span>
+<span class="c1">// 写入一条数据</span>
+<span class="n">valueCommands</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"test"</span><span class="o">,</span> <span class="s">"test value object"</span><span class="o">);</span>
+<span class="c1">// 读取一条数据</span>
+<span class="n">valueCommands</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"test"</span><span class="o">);</span>
+</pre>
+</div>
+
+
+<p>Tedis在GPL version 2协议下开源，目前还尚不完善，如果你有什么好的想法或者发现了任何bug，请不要吝啬你的意见:)</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/taobao">taobao</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
