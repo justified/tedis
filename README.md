@@ -2,7 +2,7 @@
 
 Tedis是另一个[redis](http://redis.io "redis")的java客户端
 
-Tedis的目标是打造一个可在生产环境直接使用的高可用Redis解决方案。参见[更多资料](https://github.com/juhuasuan/tedis/wiki "more info")
+Tedis的目标是打造一个可在生产环境直接使用的高可用Redis解决方案。参见[更多资料](https://github.com/taobao/tedis/wiki "more info")
 
 ## Feature
 
