@@ -1,0 +1,25 @@
+/**
+ * (C) 2011-2012 Alibaba Group Holding Limited.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation.
+ *
+ */
+package com.taobao.common.tedis.replicator.statemachine.test;
+
+import com.taobao.common.tedis.replicator.statemachine.Entity;
+import com.taobao.common.tedis.replicator.statemachine.State;
+import com.taobao.common.tedis.replicator.statemachine.StateChangeListener;
+
+public class SampleListener implements StateChangeListener {
+	int changes = 0;
+
+	public void stateChanged(Entity entity, State oldState, State newState) {
+		changes++;
+	}
+
+	public int getChanges() {
+		return changes;
+	}
+}
