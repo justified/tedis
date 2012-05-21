@@ -14,12 +14,12 @@ import java.util.Set;
 
 /**
  * @author juxin.zj E-mail:juxin.zj@taobao.com
- * @since 2011-8-12 ä¸Šåˆ11:42:11
+ * @since 2011-8-12 ÉÏÎç11:42:11
  * @version 1.0
  */
 public interface LocalCache<K, V> {
     /**
-     * ä¿å­˜æ•°æ®
+     * ±£´æÊı¾İ
      * @param key
      * @param value
      * @return
@@ -27,70 +27,70 @@ public interface LocalCache<K, V> {
     public V put(K key,V value);
 
     /**
-     * ä¿å­˜æœ‰æœ‰æ•ˆæœŸçš„æ•°æ®
+     * ±£´æÓĞÓĞĞ§ÆÚµÄÊı¾İ
      * @param key
      * @param value
-     * @param æœ‰æ•ˆæœŸ
+     * @param ÓĞĞ§ÆÚ
      * @return
      */
     public V put(K key,V value, Date expiry);
 
     /**
-     * ä¿å­˜æœ‰æœ‰æ•ˆæœŸçš„æ•°æ®
+     * ±£´æÓĞÓĞĞ§ÆÚµÄÊı¾İ
      * @param key
      * @param value
-     * @param æ•°æ®è¶…æ—¶çš„ç§’æ•°
+     * @param Êı¾İ³¬Ê±µÄÃëÊı
      * @return
      */
     public V put(K key,V value, int TTL);
 
     /**
-     * è·å–ç¼“å­˜æ•°æ®
+     * »ñÈ¡»º´æÊı¾İ
      * @param key
      * @return
      */
     public V get(K key);
 
     /**
-     * ç§»å‡ºç¼“å­˜æ•°æ®
+     * ÒÆ³ö»º´æÊı¾İ
      * @param key
      * @return
      */
     public V remove(K key);
 
     /**
-     * åˆ é™¤æ‰€æœ‰ç¼“å­˜å†…çš„æ•°æ®
+     * É¾³ıËùÓĞ»º´æÄÚµÄÊı¾İ
      * @return
      */
     public boolean clear();
 
     /**
-     * ç¼“å­˜æ•°æ®æ•°é‡
+     * »º´æÊı¾İÊıÁ¿
      * @return
      */
     public int size();
 
     /**
-     * ç¼“å­˜æ‰€æœ‰çš„keyçš„é›†åˆ
+     * »º´æËùÓĞµÄkeyµÄ¼¯ºÏ
      * @return
      */
     public Set<K> keySet();
 
     /**
-     * ç¼“å­˜çš„æ‰€æœ‰valueçš„é›†åˆ
+     * »º´æµÄËùÓĞvalueµÄ¼¯ºÏ
      * @return
      */
     public Collection<V> values();
 
     /**
-     * æ˜¯å¦åŒ…å«äº†æŒ‡å®škeyçš„æ•°æ®
+     * ÊÇ·ñ°üº¬ÁËÖ¸¶¨keyµÄÊı¾İ
      * @param key
      * @return
      */
     public boolean containsKey(K key);
 
     /**
-     * é‡Šæ”¾Cacheå ç”¨çš„èµ„æº
+     * ÊÍ·ÅCacheÕ¼ÓÃµÄ×ÊÔ´
      */
     public void destroy();
 }

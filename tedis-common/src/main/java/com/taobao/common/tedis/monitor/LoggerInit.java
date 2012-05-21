@@ -21,8 +21,9 @@ import org.apache.log4j.xml.DOMConfigurator;
 
 
 /**
+ * logger初始化，把日志输出到应用的目录里
  * @author juxin.zj E-mail:juxin.zj@taobao.com
- * @since 2011-8-11 上午09:52:45
+ * @since 2011-8-11 09:52:45
  * @version 1.0
  */
 public class LoggerInit {
@@ -77,7 +78,6 @@ public class LoggerInit {
 		Thread.currentThread().setContextClassLoader(LoggerInit.class.getClassLoader());
 		DOMConfigurator.configure(LoggerInit.class.getClassLoader().getResource("tedis-log4j.xml"));
 
-		// 设置log4j.xml中所有的Appender，将这些appender输出的日志全部进行改变
 		String logPath = getLogPath();
 		for (Enumeration<?> e = Logger.getLogger("only_for_get_all_appender").getAllAppenders(); e.hasMoreElements();) {
 			Appender appender = (Appender) e.nextElement();
@@ -86,11 +86,11 @@ public class LoggerInit {
 				File deleteFile = new File(logFileAppender.getFile());
 				File logFile = new File(logPath, logFileAppender.getFile());
 				logFileAppender.setFile(logFile.getAbsolutePath());
-				logFileAppender.activateOptions();// 很重要，否则原有日志内容会被清空
+				logFileAppender.activateOptions();
 				if (deleteFile.exists()) {
 					deleteFile.delete();
 				}
-				logger.warn("成功改变" + deleteFile.getName() + "的输出路径到:" + logFile.getAbsolutePath());
+				logger.warn("成功添加日志" + deleteFile.getName() + "到" + logFile.getAbsolutePath());
 			}
 		}
 		Thread.currentThread().setContextClassLoader(loader);

@@ -16,7 +16,7 @@ import java.io.Serializable;
 
 /**
  * @author juxin.zj E-mail:juxin.zj@taobao.com
- * @since 2011-7-25 ä¸‹åˆ07:56:13
+ * @since 2011-7-25 ÏÂÎç07:56:13
  * @version 1.0
  */
 public class JDKSerializer implements TedisSerializer<Object> {
@@ -28,7 +28,7 @@ public class JDKSerializer implements TedisSerializer<Object> {
             ObjectInputStream objectInputStream = new ObjectInputStream(byteStream);
             return objectInputStream.readObject();
         } catch (Exception ex) {
-            throw new SerializationException("ååºåˆ—åŒ–å¯¹è±¡å¤±è´¥" + ex);
+            throw new SerializationException("·´ĞòÁĞ»¯¶ÔÏóÊ§°Ü" + ex);
         }
     }
 
@@ -44,7 +44,7 @@ public class JDKSerializer implements TedisSerializer<Object> {
             objectOutputStream.flush();
             return byteStream.toByteArray();
         } catch (Exception e) {
-            throw new SerializationException("åºåˆ—åŒ–å¯¹è±¡å¤±è´¥:" + object.getClass(), e);
+            throw new SerializationException("ĞòÁĞ»¯¶ÔÏóÊ§°Ü:" + object.getClass(), e);
         }
     }
 

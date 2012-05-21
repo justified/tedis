@@ -202,13 +202,11 @@ public class DefaultValueCommands extends BaseCommands implements ValueCommands 
 
     @Override
     public <K, V> List<V> multiGet(int namespace, Collection<K> keys, long timeout, TimeUnit unit) {
-        // TODO MultiGet鏄畝鍗曞埄鐢ㄥ崟涓猤et缁勫悎,杩樻槸鏁存壒cache?濡備綍瑙ｅ喅鏁存壒cache鍛戒腑鐜囦綆鐨勯棶棰�
         throw new UnsupportedOperationException();
     }
 
     @Override
     public <K, V> List<V> multiGet(int namespace, Collection<K> keys, Date expireAt) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException();
     }
 
