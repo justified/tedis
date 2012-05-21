@@ -11,7 +11,7 @@
 	<name>tedis-common v${project.version}</name>
 	<dependencies>
 		<dependency>
-			<groupId>hessian</groupId>
+			<groupId>com.caucho</groupId>
 			<artifactId>hessian</artifactId>
 		</dependency>
 		<dependency>

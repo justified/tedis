@@ -41,6 +41,20 @@
 			<systemPath>${basedir}/lib/diamond-client-2.0.5.jar</systemPath>
 		</dependency>
 		<dependency>
+			<groupId>com.taobao.diamond</groupId>
+			<artifactId>diamond-utils</artifactId>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/diamond-utils-2.0.5.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
